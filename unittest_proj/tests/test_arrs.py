@@ -1,4 +1,5 @@
 import unittest
+
 from unittest_proj.utils import arrs
 
 
@@ -36,6 +37,6 @@ class TestArrs(unittest.TestCase):
         result = arrs.my_slice([1, 2, 3, 4, 5], end=10)
         self.assertEqual(result, [1, 2, 3, 4, 5])
 
-
-if __name__ == '__main__':
-    unittest.main()
+    def test_my_slice_empty_list(self):
+        result = arrs.my_slice([], start=1, end=3)
+        self.assertEqual(result, [])
